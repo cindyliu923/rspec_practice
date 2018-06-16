@@ -10,8 +10,10 @@ class Cart
     total = 0
 
     while @ordered_items.size > 0         # 當客戶還有書籍尚未結帳時
-      if @ordered_items.size == 2      
-        total = total + 2 * PRICE * 0.95  # 客戶買了一組哈利波特
+      if @ordered_items.size == 3  
+        total = total + 3 * PRICE * 0.9  
+      elsif @ordered_items.size == 2 
+        total = total + 2 * PRICE * 0.95  
       else
         total = total + PRICE             # 客戶買了單一本哈利波特
       end
